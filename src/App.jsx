@@ -1,7 +1,8 @@
 import Controls from "./components/Controls.jsx";
 import {useState} from "react";
 import Navbar from "./components/Navbar.jsx";
-import Home from "./components/Home.jsx";
+import Iphone from "./components/Iphone.jsx";
+// import Home from "./components/Home.jsx";
 
 export const App = () => {
     const [frameZoom, setFrameZoom] = useState(false);
@@ -26,7 +27,8 @@ export const App = () => {
                 <Controls toggleZoom={toggleZoom} frameZoom={frameZoom}/>
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className={'grow'}>
-                    <Home/>
+                    {/*<Home/>*/}
+                    <Iphone/>
                 </div>
             </div>
         </div>
