@@ -1,11 +1,19 @@
 import Controls from "./components/Controls.jsx";
 import {useState} from "react";
+import Navbar from "./components/Navbar.jsx";
 
 export const App = () => {
     const [frameZoom, setFrameZoom] = useState(false);
+    const [activePage, setActivePage] = useState(0);
+
     const toggleZoom = () => {
         setFrameZoom(!frameZoom);
-    }
+    };
+
+    const handleNavClick = (pageIndex) =>{
+        setActivePage(pageIndex)
+    };
+
     return (
         <div className="w-full h-screen grid place-items-center">
             <div className={`${frameZoom ? 'min-w-[97vw] min-h-[97vh]' : 'min-w-[70vw] min-h-[85vh]'}
@@ -15,6 +23,7 @@ export const App = () => {
                 "`}
             >
                 <Controls toggleZoom={toggleZoom} frameZoom={frameZoom}/>
+                <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
             </div>
         </div>
     )
