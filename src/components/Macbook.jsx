@@ -14,7 +14,7 @@ const Macbook = () => {
     }
 
     return (
-        <div className={'flex flex-col justify-around items-center bg-white p-8'}>
+        <div className={'flex flex-col justify-around items-center bg-white p-3'}>
             <h1 className={'font-semibold 2xl:text-4xl xl:text-3xl md:text-2xl text-sm text-gray-800 mb-5'}>
                 Choose your new MacBook Air
             </h1>
@@ -36,11 +36,11 @@ const Macbook = () => {
                 ))}
             </div>
             <div className={`flex flex-col items-center md:items-start`}>
-                <div className={`w-80 h-auto  2xl:mb-0`}>
+                <div className={`w-40 h-auto  2xl:mb-0`}>
                     <img
                         src={currentColor.img}
                         alt={`Macbook Air with ${currentMb.chip}`}
-                        className={`2xl:w-72 xl:w-52 w-48 2xl:mt-0 sm:mt-6  h-full object-contain`}/>
+                        className={`2xl:w-72 xl:w-52 w-48 2xl:mt-0  h-full object-contain`}/>
                 </div>
                 <span className={`2xl:text-lg xl:text-sm font-medium text-gray-800  text-center md:text-left`}>
                         {currentColor.label}
