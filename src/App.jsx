@@ -1,7 +1,8 @@
 import Controls from "./components/Controls.jsx";
 import {useState} from "react";
 import Navbar from "./components/Navbar.jsx";
-import Iphone from "./components/Iphone.jsx";
+// import Iphone from "./components/Iphone.jsx";
+import Macbook from "./components/Macbook.jsx";
 // import Home from "./components/Home.jsx";
 
 export const App = () => {
@@ -28,7 +29,8 @@ export const App = () => {
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className={'grow'}>
                     {/*<Home/>*/}
-                    <Iphone/>
+                    {/*<Iphone/>*/}
+                    <Macbook/>
                 </div>
             </div>
         </div>
