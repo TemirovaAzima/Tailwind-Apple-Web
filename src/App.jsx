@@ -2,7 +2,8 @@ import Controls from "./components/Controls.jsx";
 import {useState} from "react";
 import Navbar from "./components/Navbar.jsx";
 // import Iphone from "./components/Iphone.jsx";
-import Macbook from "./components/Macbook.jsx";
+// import Macbook from "./components/Macbook.jsx";
+import Watch from "./components/Watch.jsx";
 // import Home from "./components/Home.jsx";
 
 export const App = () => {
@@ -30,7 +31,8 @@ export const App = () => {
                 <div className={'grow'}>
                     {/*<Home/>*/}
                     {/*<Iphone/>*/}
-                    <Macbook/>
+                    {/*<Macbook/>*/}
+                    <Watch/>
                 </div>
             </div>
         </div>
