@@ -16,6 +16,10 @@ export const App = () => {
         setFrameZoom(!frameZoom);
     };
 
+    const resetPage = () =>{
+        setActivePage(0)
+    }
+
     const handleNavClick = (pageIndex) => {
         setActivePage(pageIndex)
     };
@@ -28,8 +32,8 @@ export const App = () => {
             transition-all duration-300 flex 
                 "`}
             >
-                <Controls toggleZoom={toggleZoom} frameZoom={frameZoom}/>
-                <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
+                <Controls toggleZoom={toggleZoom} frameZoom={frameZoom} resetPage={resetPage} activePage={activePage}/>
+                <Navbar activePage={activePage} handleNavClick={handleNavClick} />
                 <div className={'grow'}>
                     <PageTransition activePage={activePage}>
                         <Home onNavigate={handleNavClick}/>

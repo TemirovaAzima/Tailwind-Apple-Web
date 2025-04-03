@@ -14,7 +14,7 @@ const Macbook = () => {
     }
 
     return (
-        <div className={'flex flex-col justify-around items-center bg-white p-3'}>
+        <div className={'flex h-full w-full flex-col justify-around items-center bg-white p-3'}>
             <h1 className={'font-semibold 2xl:text-4xl xl:text-3xl md:text-2xl text-sm text-gray-800 mb-5'}>
                 Choose your new MacBook Air
             </h1>
