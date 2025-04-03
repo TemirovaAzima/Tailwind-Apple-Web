@@ -3,7 +3,8 @@ import {useState} from "react";
 import Navbar from "./components/Navbar.jsx";
 // import Iphone from "./components/Iphone.jsx";
 // import Macbook from "./components/Macbook.jsx";
-import Watch from "./components/Watch.jsx";
+// import Watch from "./components/Watch.jsx";
+import IMac from "./components/IMac.jsx";
 // import Home from "./components/Home.jsx";
 
 export const App = () => {
@@ -32,7 +33,8 @@ export const App = () => {
                     {/*<Home/>*/}
                     {/*<Iphone/>*/}
                     {/*<Macbook/>*/}
-                    <Watch/>
+                    {/*<Watch/>*/}
+                    <IMac/>
                 </div>
             </div>
         </div>
