@@ -1,11 +1,12 @@
 import Controls from "./components/Controls.jsx";
 import {useState} from "react";
 import Navbar from "./components/Navbar.jsx";
-// import Iphone from "./components/Iphone.jsx";
-// import Macbook from "./components/Macbook.jsx";
-// import Watch from "./components/Watch.jsx";
+import Iphone from "./components/Iphone.jsx";
+import Macbook from "./components/Macbook.jsx";
+import Watch from "./components/Watch.jsx";
+import PageTransition from "./components/PageTransition.jsx";
 import IMac from "./components/IMac.jsx";
-// import Home from "./components/Home.jsx";
+import Home from "./components/Home.jsx";
 
 export const App = () => {
     const [frameZoom, setFrameZoom] = useState(false);
@@ -15,7 +16,7 @@ export const App = () => {
         setFrameZoom(!frameZoom);
     };
 
-    const handleNavClick = (pageIndex) =>{
+    const handleNavClick = (pageIndex) => {
         setActivePage(pageIndex)
     };
 
@@ -30,13 +31,15 @@ export const App = () => {
                 <Controls toggleZoom={toggleZoom} frameZoom={frameZoom}/>
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className={'grow'}>
-                    {/*<Home/>*/}
-                    {/*<Iphone/>*/}
-                    {/*<Macbook/>*/}
-                    {/*<Watch/>*/}
-                    <IMac/>
+                    <PageTransition activePage={activePage}>
+                        <Home onNavigate={handleNavClick}/>
+                        <Iphone/>
+                        <Macbook/>
+                        <Watch/>
+                        <IMac/>
+                    </PageTransition>
                 </div>
             </div>
         </div>
-    )
+)
 }
