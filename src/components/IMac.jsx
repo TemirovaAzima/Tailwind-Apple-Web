@@ -10,14 +10,15 @@ const IMac = () => {
     return (
         <div className={`h-full grid grid-cols-2 grid-rows-2 md:gap-4 gap-1 bg-white relative`}>
             <div
-                className={`col-span-1 row-span-1 flex flex-col items-center md:justify-center justify-start pt-8 bg-gray-50`}>
+                className={`col-span-1 row-span-1 flex flex-col items-center justify-center  p-4 bg-gray-50`}>
                 <img
                     src={getCurrentModel().images.front}
                     alt={`Imac`}
                     className={`2xl:max-w-full xl:max-w-48 max-w-48`}
                 />
             </div>
-            <div className={`h-full bg-gray-50 col-span-1 row-span-2 p-4 flex items-center justify-center`}>
+            <div
+                className={`h-full bg-gray-50 col-span-1 row-span-2 p-4 flex items-center pt-8 justify-start md:justify-center`}>
                 <img
                     src={getCurrentModel().images.side}
                     alt={`IMac`}
@@ -32,7 +33,7 @@ const IMac = () => {
                 />
             </div>
             <div
-                className={`absolute md:top-1/2 top-3/4 md:left-4 left-12 transform -translate-y-1/2 flex flex-col lg:space-y-2 space-y-1 bg-gray-50`}>
+                className={`absolute md:top-1/2 top-3/4 md:right-4 right-12 transform -translate-y-1/2 flex flex-col lg:space-y-2 space-y-1 bg-gray-50`}>
                 {imacModels.map((model) => (
                     <div key={Math.random()} className={`flex items-center space-x-2`}>
                         <button
