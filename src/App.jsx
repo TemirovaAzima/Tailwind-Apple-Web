@@ -12,6 +12,7 @@ export const App = () => {
     const [frameZoom, setFrameZoom] = useState(false);
     const [activePage, setActivePage] = useState(0);
     const [isLgScreen, setIsLgScreen] = useState(window.innerWidth > 1024);
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,6 +39,10 @@ export const App = () => {
         setActivePage(pageIndex);
     };
 
+    const toggleNavbar = () =>{
+        setIsNavbarOpen(!isNavbarOpen);
+    }
+
     return (
         <div className="w-full h-screen grid place-items-center">
             <div className={`${frameZoom ? 'min-w-[97vw] min-h-[97vh]' : 'min-w-[70vw] min-h-[85vh]'}
@@ -47,7 +52,7 @@ export const App = () => {
                 "`}
             >
                 <Controls toggleZoom={toggleZoom} frameZoom={frameZoom} resetPage={resetPage} activePage={activePage}/>
-                <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
+                <Navbar activePage={activePage} handleNavClick={handleNavClick} isNavbarOpen={isNavbarOpen} toggleNavbar={toggleNavbar}/>
                 <div className={'grow'}>
                     <PageTransition activePage={activePage}>
                         <Home onNavigate={handleNavClick}/>
