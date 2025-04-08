@@ -16,17 +16,17 @@ export const App = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsLgScreen(window.innerWidth >=1024)
+            setIsLgScreen(window.innerWidth >= 1024)
             if (window.innerWidth < 1024) {
                 setFrameZoom(true);
             }
         }
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    },[]);
+    }, []);
 
     const toggleZoom = () => {
-        if(isLgScreen) {
+        if (isLgScreen) {
             setFrameZoom(!frameZoom);
         }
     };
@@ -39,7 +39,7 @@ export const App = () => {
         setActivePage(pageIndex);
     };
 
-    const toggleNavbar = () =>{
+    const toggleNavbar = () => {
         setIsNavbarOpen(!isNavbarOpen);
     }
 
@@ -52,7 +52,8 @@ export const App = () => {
                 "`}
             >
                 <Controls toggleZoom={toggleZoom} frameZoom={frameZoom} resetPage={resetPage} activePage={activePage}/>
-                <Navbar activePage={activePage} handleNavClick={handleNavClick} isNavbarOpen={isNavbarOpen} toggleNavbar={toggleNavbar}/>
+                <Navbar activePage={activePage} handleNavClick={handleNavClick} isNavbarOpen={isNavbarOpen}
+                        toggleNavbar={toggleNavbar}/>
                 <div className={'grow'}>
                     <PageTransition activePage={activePage}>
                         <Home onNavigate={handleNavClick}/>
