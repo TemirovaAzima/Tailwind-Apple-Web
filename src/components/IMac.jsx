@@ -10,18 +10,18 @@ const IMac = () => {
     return (
         <div className={`h-full grid grid-cols-2 grid-rows-2 md:gap-4 gap-1 bg-white relative`}>
             <div
-                className={`h-full col-span-1 row-span-2 flex flex-col items-center md:justify-center justify-start pt-8 bg-gray-50`}>
-                <img
-                    src={getCurrentModel().images.side}
-                    alt={`Imac`}
-                    className={`2xl:max-w-full xl:max-w-36 max-w-24`}
-                />
-            </div>
-            <div className={`bg-gray-50 col-span-1 row-span-1 p-4 flex items-center justify-center`}>
+                className={`col-span-1 row-span-1 flex flex-col items-center md:justify-center justify-start pt-8 bg-gray-50`}>
                 <img
                     src={getCurrentModel().images.front}
+                    alt={`Imac`}
+                    className={`2xl:max-w-full xl:max-w-48 max-w-48`}
+                />
+            </div>
+            <div className={`h-full bg-gray-50 col-span-1 row-span-2 p-4 flex items-center justify-center`}>
+                <img
+                    src={getCurrentModel().images.side}
                     alt={`IMac`}
-                    className={`2xl:max-w-full xl:max-w-52 max-w-48`}
+                    className={`2xl:max-w-full xl:max-w-36 max-w-24`}
                 />
             </div>
             <div className={`bg-gray-50 col-span-1 row-span-2 p-4 flex items-center justify-center`}>
